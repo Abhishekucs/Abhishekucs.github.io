@@ -1,0 +1,298 @@
+:root {
+  --main-bg: white;
+  --secondary-bg: black;
+  --font-color: black;
+  --sec-font-color: grey;
+  --extra-color: #B3001B;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-bg);
+  overflow-x: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 10% 1fr 10%;
+      grid-template-rows: 10% 1fr 10%;
+}
+
+.container .header {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .header .logo {
+  padding-top: 10px;
+}
+
+.container .header .hamburger {
+  display: block;
+  padding: 20px;
+  padding-right: 30px;
+}
+
+.container .header .hamburger .burger0 {
+  width: 30px;
+  height: 4px;
+  background-color: var(--secondary-bg);
+  margin-bottom: 2px;
+}
+
+.container .header .hamburger .burger1 {
+  width: 20px;
+  height: 4px;
+  background-color: var(--secondary-bg);
+  margin-bottom: 2px;
+}
+
+.container .header .hamburger .burger2 {
+  width: 10px;
+  height: 4px;
+  background-color: var(--secondary-bg);
+}
+
+.container .header .darkmode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 30px;
+}
+
+.container .header .darkmode .theme-switch {
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  width: 55px;
+}
+
+.container .header .darkmode .theme-switch input {
+  display: none;
+}
+
+.container .header .darkmode .slider {
+  background-color: var(--secondary-bg);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.container .header .darkmode .slider:before {
+  background-color: var(--main-bg);
+  bottom: 4px;
+  content: "";
+  height: 23px;
+  left: 4px;
+  position: absolute;
+  -webkit-transition: .4s;
+  transition: .4s;
+  width: 23px;
+}
+
+.container .header .darkmode input:checked + .slider {
+  background-color: var(--sec-font-color);
+}
+
+.container .header .darkmode input:checked + .slider:before {
+  -webkit-transform: translateX(23px);
+          transform: translateX(23px);
+}
+
+.container .header .darkmode .slider.round {
+  border-radius: 30px;
+}
+
+.container .header .darkmode .slider.round:before {
+  border-radius: 50%;
+}
+
+.container .content {
+  width: 100%;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30px 1fr 30px;
+      grid-template-columns: 30px 1fr 30px;
+}
+
+.container .content .typo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.container .content .typo span {
+  color: var(--sec-font-color);
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.container .content .typo p {
+  color: var(--sec-font-color);
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-bottom: -5px;
+}
+
+.container .content .typo h1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--font-color);
+  margin-left: -4px;
+  margin-bottom: 35px;
+}
+
+.container .content .press {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+  margin-top: 15px;
+}
+
+.container .content .press .btn_1 {
+  cursor: pointer;
+  background-color: #B3001B;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--main-bg);
+  font-size: 16px;
+  padding: 5px;
+}
+
+.container .footer {
+  width: 100%;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+  font-family: 'Montserrat', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .footer .box h2 {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--sec-font-color);
+}
+
+.container_1 {
+  height: 100%;
+  width: 100%;
+  background-color: var(--secondary-bg);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 10% 1fr 10%;
+      grid-template-rows: 10% 1fr 10%;
+}
+
+.container_1 .head {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container_1 .head h1 {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding: 10px;
+  background-color: var(--extra-color);
+}
+
+.container_1 .info {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30px 1fr 30px;
+      grid-template-columns: 30px 1fr 30px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container_1 .info .who_am_i {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.container_1 .info .who_am_i h1 {
+  font-weight: 600;
+  color: var(--main-bg);
+}
+
+.container_1 .info .who_am_i p {
+  font-weight: 400;
+  color: var(--main-bg);
+}
+
+.container_1 .info .skills {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.container_1 .info .skills h1 {
+  font-weight: 600;
+  color: var(--main-bg);
+}
+/*# sourceMappingURL=index.css.map */
